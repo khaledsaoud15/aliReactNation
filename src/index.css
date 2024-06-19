@@ -1,3 +1,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .flexbox {
+    @apply flex items-center;
+  }
+  .headers {
+    @apply text-base font-semibold;
+  }
+  .imgDiv {
+    @apply flex items-center justify-center rounded-full p-3 border;
+  }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  background-color: white;
+  padding: 16px 22px;
+  border-radius: 100%;
+  color: black;
+  background-image: url("/public/arrowdown.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.swiper-button-next {
+  rotate: -90deg;
+}
+.swiper-button-prev {
+  rotate: 90deg;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  content: "";
+}
